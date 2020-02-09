@@ -252,9 +252,7 @@ export default class Dashboard extends Component {
             <div className={"col-md-5"}>
               <div className={"card"}>
                 <div style={{ display: "flex", alignItems: "flex-end" }}>
-                  <div className={"text-format"}>
-                    Overdue Tasks 08
-                  </div>
+                  <div className={"text-format overdue-header-label"}>Overdue Tasks 08</div>
                   <Stepper
                     width={"300px"}
                     circleFontSize={0}
@@ -278,9 +276,7 @@ export default class Dashboard extends Component {
               <div className={"row"}>
                 <div className={"col-md-6"}>
                   <div className={"card"}>
-                    <span className={"text-format"}>
-                      Upcoming Task 08
-                    </span>
+                    <span className={"text-format"}>Upcoming Task 08</span>
                     <DataTable
                       columns={upcomingTaskColumns}
                       theme="solarized"
@@ -291,9 +287,7 @@ export default class Dashboard extends Component {
                 </div>
                 <div className={"col-md-6"}>
                   <div className={"card"}>
-                    <span className={"text-format"}>
-                      Projects 09
-                    </span>
+                    <span className={"text-format"}>Projects 09</span>
                     <DataTable
                       columns={projectTabColumns}
                       theme="solarized"
@@ -311,9 +305,14 @@ export default class Dashboard extends Component {
           <div className={"row space-around"}>
             <div className={"col-md-8 queries-md-tab1"}>
               <div className="card">
-                <span className={"text-format"}>
-                  Queries
-                </span>
+                <div className={"queries-tab-header-wrapper"}>
+                  <span className={"queries-label"}>Queries</span>
+                  <div className={"queries-btn-wrapper"}>
+                    <span className={"queries-btn-employee"}>Employee</span>
+                    <span className={"queries-btn-employer"}>Employer</span>
+                  </div>
+                </div>
+
                 <DataTable
                   columns={queries}
                   theme="solarized"
