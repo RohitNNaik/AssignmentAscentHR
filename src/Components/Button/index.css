@@ -1,0 +1,7 @@
+.btn-custom{
+    padding: 6px 15px;
+    font-family: monospace;
+    border-radius: 2px;
+    border: 1px solid lightgray ;
+    box-shadow: 0 0 3px lightgray;
+}
