@@ -6,11 +6,13 @@ import { overDueTable, projectData, queriesData } from "../../Assets/data";
 import "./index.css";
 import Stepper from "react-stepper-horizontal";
 import VerticalLinearStepper from "../../Components/verticleStepper/verticleStepper";
-
-const styles = { fontFamily: 'monospace',
-      fontSize: '15px',/* 
+import But from "../../Components/Button/index";
+const styles = {
+  fontFamily: 'monospace',
+  fontSize: '15px',/* 
       fontWeight: 'bold', */
-      color: '#848484'};
+  color: '#848484'
+};
 const overdueTasksColumns = [
   {
     name: "Company",
@@ -20,18 +22,20 @@ const overdueTasksColumns = [
     style: styles,
     cell: row => {
       return (
-        <div style={{display: 'flex', alignItems: 'center'}}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <StatusPill
-            style={{ position:'absolute', borderRadius: 50,position: "absolute",
-            borderRadius: "50%",
-            fontSize: 10,
-            padding: "8px 3px",
-            zIndex: 1500, fontFamily: 'monospace', fontWeight: 'bold', }}
+            style={{
+              position: 'absolute', borderRadius: 50, position: "absolute",
+              borderRadius: "50%",
+              fontSize: 10,
+              padding: "8px 3px",
+              zIndex: 1500, fontFamily: 'monospace', fontWeight: 'bold',
+            }}
             color={"#ffffff"}
             label={"1000"}
             bgColor={"#848484"}
           />
-          <span style={{position: "relative", verticalAlign: "middle", paddingLeft: 30}}>{row.title}</span>
+          <span style={{ position: "relative", verticalAlign: "middle", paddingLeft: 30 }}>{row.title}</span>
         </div>
       );
     }
@@ -51,7 +55,7 @@ const overdueTasksColumns = [
     cell: row => {
       return (
         <StatusPill
-          style={{padding: "4px 7px", width: 70, borderRadius: 4, fontSize:14 }}
+          style={{ padding: "4px 7px", width: 70, borderRadius: 4, fontSize: 14 }}
           color={"#EA4357"}
           label={row.status}
           bgColor={row.status === "OverDue" ? "#F5C9D0" : "#FFE3AF"}
@@ -67,7 +71,7 @@ const overdueTasksColumns = [
     cell: row => {
       return (
         <StatusPill
-          style={{fontWeight: 'bold', fontFamily: 'monospace', padding: "3px 8px", borderRadius: 4, fontSize:12 }}
+          style={{ fontWeight: 'bold', fontFamily: 'monospace', padding: "3px 8px", borderRadius: 4, fontSize: 12 }}
           cellData={row}
           label={row.days}
           bgColor={"#848484"}
@@ -86,7 +90,7 @@ const upcomingTaskColumns = [
     style: styles,
     cell: row => {
       return (
-        <div style={{display: 'flex', alignItems: 'center'}}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <StatusPill
             style={{
               position: "absolute",
@@ -118,7 +122,7 @@ const upcomingTaskColumns = [
     name: "Task",
     selector: "task",
     sortable: false,
-    style: { padding: "1px 7px", color: "#848484"}
+    style: { padding: "1px 7px", color: "#848484" }
   },
   {
     name: "Days",
@@ -192,38 +196,40 @@ const queries = [
     style: styles,
     cell: row => {
       return (
-        <div style={{display: 'flex', alignItems: 'center'}}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <StatusPill
-            style={{fontSize:10, position:'absolute', borderRadius: 50,
-            borderRadius: "50%",
-            padding: "8px 3px",
-            zIndex: 1500 }}
+            style={{
+              fontSize: 10, position: 'absolute', borderRadius: 50,
+              borderRadius: "50%",
+              padding: "8px 3px",
+              zIndex: 1500
+            }}
             color={"#ffffff"}
             label={"1000"}
             bgColor={"#848484"}
           />
-          <span style={{position: "relative", verticalAlign: "middle", paddingLeft: 30}}>{row.company}</span>
+          <span style={{ position: "relative", verticalAlign: "middle", paddingLeft: 30 }}>{row.company}</span>
         </div>
       );
     }
-  },  {
+  }, {
     name: "Employer Queries",
     selector: "query",
     sortable: false,
     style: styles
-  },  {
+  }, {
     name: "TAT 0-8",
     selector: "TAT1",
     sortable: false,
     width: "100px",
     style: styles
-  },  {
+  }, {
     name: "TAT 8-16",
     selector: "TAT2",
     sortable: false,
     width: "100px",
     style: styles
-  },{
+  }, {
     name: "TAT 16-24",
     selector: "TAT3",
     sortable: false,
@@ -236,7 +242,7 @@ const queries = [
     width: "100px",
     style: styles
   },
-]; 
+];
 
 export default class Dashboard extends Component {
   render() {
@@ -323,12 +329,20 @@ export default class Dashboard extends Component {
               </div>
             </div>
             <div className={"col-md-3 queries-md-tab2"}>
-              <div className={'md-tab2-header'}>
-              <span>unread</span>
-              <span>All</span>
+              <div style={{ display: 'flex', justifyContent: "flex-end",marginTop:"18px" }}>
+                <But
+                  bgColor={"#d3d3d3"}
+                  label={"Messages"} />
+                <But
+                  bgColor={"white"}
+                  label={"Knowledge"} />
               </div>
-              <hr className={'divider'}/>
-              <VerticalLinearStepper/>
+              <div className={'md-tab2-header'}>
+                <span>unread</span>
+                <span>All</span>
+              </div>
+              <hr className={'divider'} />
+              <VerticalLinearStepper />
             </div>
           </div>
         </div>

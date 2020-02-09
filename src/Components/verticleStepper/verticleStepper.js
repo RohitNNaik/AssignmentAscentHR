@@ -14,16 +14,20 @@ import Update from "../../Components/updates/index";
 const useStyles = makeStyles(theme => ({
     root: {
         width: '100%',
+        color: "lightgrey"
     },
     button: {
         marginTop: theme.spacing(0),
         marginRight: theme.spacing(0),
+        color: "lightgrey"
+
     },
     actionsContainer: {
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(0),
+        color: "lightgrey"
     },
     resetContainer: {
-        padding: theme.spacing(3),
+        padding: theme.spacing(0),
     },
 }));
 
