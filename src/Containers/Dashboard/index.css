@@ -18,7 +18,19 @@
 }
 
 .queries-md-tab2{
-    background-color: green;
+    background-color: white;
+}
+.md-tab2-header{
+    text-align: left;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    width:34%;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.divider{
+    margin-top: 0;
 }
 
 @media (min-width: 768px){

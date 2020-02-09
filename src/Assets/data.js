@@ -92,3 +92,43 @@ export const queriesData = {
     }
   ]
 };
+
+export const testData = {
+  data: [
+    {
+      info: "Production Server down",
+      value: "Just Now"
+    },
+  {
+      info: "New order recived",
+      value: "14 mins"
+    },
+    {
+      info: "server Down",
+      value: "20 mins",
+      button: "Save"
+    },
+    {
+      info: "Break Time",
+      value: "30 mins",
+      button : "Pending"
+    },
+    {
+      info: "Break Time",
+      value: "30 mins",
+      button :"Pending" 
+    },
+    {
+      info: "DB overloaded 80%",
+      value: "40 mins",
+      button:"settled"
+    },
+    {
+      info:"Production Server up",
+      value:"40 mins",
+      button:'settled'
+    }
+    
+  ]
+};
+

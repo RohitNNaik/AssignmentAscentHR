@@ -5,6 +5,7 @@ import DataTable, { createTheme } from "react-data-table-component";
 import { overDueTable, projectData, queriesData } from "../../Assets/data";
 import "./index.css";
 import Stepper from "react-stepper-horizontal";
+import VerticalLinearStepper from "../../Components/verticleStepper/verticleStepper";
 
 const styles = { fontFamily: 'monospace',
       fontSize: '15px',/* 
@@ -322,7 +323,14 @@ export default class Dashboard extends Component {
                 />
               </div>
             </div>
-            <div className={"col-md-3 queries-md-tab2"}>test</div>
+            <div className={"col-md-3 queries-md-tab2"}>
+              <div className={'md-tab2-header'}>
+              <span>unread</span>
+              <span>All</span>
+              </div>
+              <hr className={'divider'}/>
+              <VerticalLinearStepper/>
+            </div>
           </div>
         </div>
       </div>
