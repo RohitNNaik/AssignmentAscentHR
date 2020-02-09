@@ -1,0 +1,56 @@
+.dashbaord-labels{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 20px 6px 20px;
+}
+
+.label-text{
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: #848484;
+}
+
+.card{
+    height: 340px;
+    padding: 8px;
+    box-shadow: 0 0 1px 1px lightgrey;
+}
+
+.queries-md-tab2{
+    background-color: green;
+}
+
+@media (min-width: 768px){
+.col-md-8.queries-md-tab1{
+    flex: 0 0 68.5%;
+    max-width: 68.5%;
+    padding: 0;
+}
+.col-md-3.queries-md-tab2{
+    flex: 0 0 27%;
+    max-width: 27%;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+}
+
+.m-top-20{
+    margin-top: 25px;
+}
+
+.text-format{
+    text-align: left;
+    padding-top: 14px;
+    padding-left: 10px;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: #848484;
+  }
+
+  .m-bottom-40{
+    margin-bottom: 40px;
+  }
