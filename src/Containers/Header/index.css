@@ -8,3 +8,23 @@
     box-shadow: 0 0 3px 1px lightgrey;
     z-index: 15000;
 }
+
+.header-left-content{
+    text-align: left;
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.empty-space{
+    width: 50px;
+    height: inherit;
+}
+
+.m-rt-12{
+    margin-right: 12px;
+}
+
+.react-search-field {
+    margin-top: 10px !important  ;
+}
